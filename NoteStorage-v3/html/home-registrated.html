@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
+    <script type="module">
+        import * as docx from "https://cdn.jsdelivr.net/npm/docx@9.8.1/+esm";
+        window.docx = docx;
+    </script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>NoteStorage | Главная</title>
+</head>
+
+<body>
+    <header>
+        <div class="container header-wrapper">
+            <a href="home.html" class="logo-name">
+                <div class="logo"></div>
+                <h1>NoteStorage</h1>
+            </a>
+            <nav>
+                <a href="home.html">Главная</a>
+                <a title="Корзина" href="drafts.html">
+                    <div class="trash"></div>
+                </a>
+                <div class="profile"></div>
+            </nav>
+        </div>
+
+        <div class="modal" id="authModal">
+            <div class="modal-dialog">
+                <form action="#" method="POST" class="custom-form">
+                    <div class="btn-close-block">
+                        <button class="btn-close">Закрыть</button>
+                    </div>
+                    <h1>Авторизация</h1>
+                    <div class="form-group">
+                        <label>Логин</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Пароль</label>
+                        <input type="password" required>
+                    </div>
+                    <button class="submit-btn">Войти</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal" id="regModal">
+            <div class="modal-dialog">
+                <form action="#" method="POST" class="custom-form">
+                    <div class="btn-close-block">
+                        <button class="btn-close">Закрыть</button>
+                    </div>
+                    <h1>Регистрация</h1>
+                    <div class="form-group">
+                        <label>Логин</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Электронная почта</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Пароль</label>
+                        <input type="password" required>
+                    </div>
+                    <button class="submit-btn">Зарегистироваться</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="note-form">
+                <form action="#" method="POST" class="create-note-form" id="note-form">
+                    <div class="note-form-div">
+                        <input id="note-title" class="title-input" type="text" placeholder="Название заметки" required>
+                        <div id="editor-container" class="editor-container"></div>
+                        <input type="hidden" name="note-content" id="hidden-content-input">
+                        <button class="submit-btn-note">Создать</button>
+                    </div>
+                    <div class="export">
+                        <button type="button" id="download-word" class="export-word">Экспорт в Word</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-block container">
+            <div class="footer-info">
+                <p>NoteStorage - онлайн заметки с форматированием прямо в вашем браузере.</p>
+            </div>
+            <div class="links">
+                <a href="/html/home.html">Главная</a>
+                <a href="/html/drafts.html">Черновики</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/js/script-format.js"></script>
+    <script src="/js/script-word.js"></script>
+</body>
+
+</html>
