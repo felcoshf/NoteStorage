@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}NoteStorage | Хранилище{% endblock %}
+
+{% block extra_css %}
+{% endblock %}
+
+{% block content %}
+    <main>
+        <section class="container drafts-container">
+            <h1 class="title-of-drafts">Черновики</h1>
+            <div class="drafts">
+                <div class="draft">
+                    <div class="header-of-draft">
+                        <button title="Восстановить" type="button" class="remove-draft">
+                            <div class="remove"></div>
+                        </button>
+                        <div class="title-of-draft-block">
+                            <h2 class="title-of-draft">Название...</h2>
+                        </div>
+                        <button title="Удалить" type="button" class="bin-of-draft">
+                            <div class="trash"></div>
+                        </button>
+                    </div>
+                    <div class="text-of-draft-block">
+                        <p class="text-of-draft">.........</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+    <script src="{% static '../static/js/script-format.js' %}"></script>
+    
+{% endblock %}
