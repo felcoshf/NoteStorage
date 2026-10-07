@@ -1,0 +1,70 @@
+.drafts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 650px;
+}
+
+.title-of-drafts {
+    padding: 30px;
+    font-size: 30px;
+    color: #1d353f;
+}
+
+.drafts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    width: 1140px;
+    justify-content: center;
+    gap: 40px;
+}
+
+.draft {
+    width: 350px;
+    height: 250px;
+    border: 2px solid #264653;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.header-of-draft {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bin-of-draft {
+    width: 50px;
+    height: 50px;
+    background-color: #264653;
+    border: none;
+    border-radius: 0 5px 0 20px;
+    cursor: pointer;
+}
+
+.remove-draft {
+    width: 50px;
+    height: 50px;
+    background-color: #264653;
+    border: none;
+    border-radius: 5px 0 20px 0;
+    cursor: pointer;
+}
+
+.remove {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url("/images/back-arrow.png") center center/cover no-repeat;
+}
+
+.title-of-draft {
+    padding: 5px;
+}
+
+.text-of-draft-block {
+    width: 346px;
+    height: 170px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #ffffff;
+}
